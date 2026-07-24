@@ -2,6 +2,7 @@ package hooks;
 import java.time.Duration;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -11,6 +12,7 @@ public class HooksImplementation extends BaseClass {
 
     @Before(order = 1)
     public void preConditions(){
+
         ChromeOptions options = new ChromeOptions();
 
 options.addArguments("--headless=new");   // or "--headless"
