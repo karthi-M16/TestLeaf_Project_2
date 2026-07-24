@@ -31,7 +31,7 @@ jobs:
         run: mvn clean
 
       - name: Execute Test Suite
-        run: mvn test -Dsurefire.suiteXmlFiles=SEQPM.xml
+        run: mvn test -Dsurefire.suiteXmlFiles=demoTest.xml
 
       - name: Upload Test Reports
         if: always()
