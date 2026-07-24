@@ -11,7 +11,14 @@ public class HooksImplementation extends BaseClass {
 
     @Before(order = 1)
     public void preConditions(){
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+
+options.addArguments("--headless=new");   // or "--headless"
+options.addArguments("--no-sandbox");
+options.addArguments("--disable-dev-shm-usage");
+options.addArguments("--window-size=1920,1080");
+
+driver = new ChromeDriver(options);
          driver.get("https://leaftaps.com/opentaps/control/main");
        
     }
